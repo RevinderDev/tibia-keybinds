@@ -29,9 +29,6 @@ Else
     Gui,Color,Green
 return
 
-; Alternate suspending
-^k::Suspend
-
 ; ====== Movement
 w::Up
 a::Left
