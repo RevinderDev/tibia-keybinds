@@ -18,5 +18,37 @@ WinSet, Region, 0-0 %size% E
 return
 
 
+
+; ====== Toggling on/off
+`::
+suspend, toggle
+if (A_IsSuspended)
+    Gui,Color,Red
+Else
+    Gui,Color,Green
+SendInput {NumpadAdd Down}
+Random, rand, 30.0, 60.0
+sleep, rand
+SendInput {NumpadAdd Up}
+return
+
+
+
+; ====== Keybinds
+
+WheelUp::
+	SendInput {F9 Down}
+	Random, rand, 30.0, 60.0
+	sleep, rand
+	SendInput {F9 Up}
+return
+
+WheelDown::
+	SendInput {F10 Down}
+	Random, rand, 30.0, 60.0
+	sleep, rand
+	SendInput {F10 Up}
+return
+
 XButton1::F11
 XButton2::F12
