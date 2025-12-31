@@ -1,6 +1,6 @@
 ; Made by Revinder
 ; twitter.com/Revinder_
-; 2020
+; 2025
 
 #Requires AutoHotkey v2.0
 #SingleInstance Force
