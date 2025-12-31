@@ -13,6 +13,7 @@ Global wasEnabled := True
 ; Simple dot indication of script being enabled
 Global StatusGui := Gui()
 DrawGui()
+SetTimer(UpdateColor, 250)
 
 ; ====== Toggling on/off
 #HotIf WinActive(TIBIA_EXE)
@@ -26,6 +27,13 @@ DrawGui()
 
 UpdateColor() {
     Global wasEnabled
+    Global TIBIA_EXE
+
+    If !WinActive(TIBIA_EXE) {
+        StatusGui.BackColor := "Red"
+        Return
+    }
+
     If wasEnabled {
         StatusGui.BackColor := "Green"
     }
